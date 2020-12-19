@@ -18,17 +18,28 @@ let generoComedias = {
 
 let miPobreAngelito = {
   nombre: 'Mi pobre angelito',
-  duracion: 120
+  duracion: 120,
   ...generoComedias
 }
 
 let quePasoAyer = {
   nombre: 'Que paso ayer?',
-  duracion: 110
+  duracion: 110,
   ...generoComedias
 
 }
 
 console.log(miPobreAngelito);
 console.log(quePasoAyer);
+
+
+//Propagando dentro de una función
+
+function peliculasVistas(...nombresDePeliculas){
+  for (let i = 0; i < nombresDePeliculas.length; i++){
+    console.log('La persona ya vió ' + nombresDePeliculas[i])
+  }
+}
+
+peliculasVistas('End Game', 'Iron Man 3', 'Mi pobre angelito');
 
